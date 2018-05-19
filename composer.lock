@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b978035bfc57ca0bdc794a593caec14",
+    "content-hash": "f79ee86cf559edf90f65911e1ed98cb3",
     "packages": [
         {
             "name": "composer/installers",
@@ -654,6 +654,47 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/drupal"
             }
+        },
+        {
+            "name": "drupal/settingsphp",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/settingsphp",
+                "reference": "f9f24b8cc33670fb80bd9dba193aa975f82eec5b"
+            },
+            "require": {
+                "drupal/drupal": "~7.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-1.x-dev",
+                    "datestamp": "1440074039",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jonhattan",
+                    "homepage": "https://www.drupal.org/user/49817"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/settingsphp",
+            "support": {
+                "source": "http://cgit.drupalcode.org/settingsphp"
+            },
+            "time": "2015-08-20T12:28:29+00:00"
         },
         {
             "name": "drush/drush",
@@ -2088,7 +2129,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/admin_menu": 5
+        "drupal/admin_menu": 5,
+        "drupal/settingsphp": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

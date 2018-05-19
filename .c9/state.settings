@@ -37,8 +37,8 @@
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab3",
-                    "tab12"
+                    "tab12",
+                    "tab3"
                 ]
             },
             "name": "pane1",
@@ -48,9 +48,7 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12",
-                        "focus",
-                        "connecting"
+                        "tab12"
                     ],
                     "document": {
                         "changed": false,
@@ -58,8 +56,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"92624e5f2719\"",
-                        "tooltip": "bash - \"92624e5f2719\"",
+                        "title": "bash - \"7980fbc144bc\"",
+                        "tooltip": "bash - \"7980fbc144bc\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -129,7 +127,7 @@
             "@acestatus": 1,
             "@datagrid": 1,
             "@divider": 4,
-            "@document": 6,
+            "@document": 7,
             "@form": 6,
             "@immediate": 1,
             "@menu": 5,
@@ -138,9 +136,9 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 4,
+            "@session": 5,
             "@tab": 5,
-            "@undoManager": 6,
+            "@undoManager": 7,
             "@welcome": 1
         }
     },
@@ -196,9 +194,9 @@
         "expanded": {
             "json()": [
                 "/",
-                "/web",
                 "/web/sites",
-                "/web/sites/default"
+                "/web/sites/default",
+                "/web"
             ]
         }
     },
@@ -207,13 +205,13 @@
     },
     "tabs": {
         "json()": {
-            "focus": "tab0",
+            "focus": "/web/sites/default/settings.php",
             "meta": {
                 "accessList": [
-                    "tab0",
                     "tab4",
-                    "tab1",
-                    "tab2"
+                    "tab2",
+                    "tab0",
+                    "tab1"
                 ]
             },
             "name": "pane0",
@@ -223,8 +221,7 @@
                     "name": "tab0",
                     "path": "",
                     "className": [
-                        "tab0",
-                        "focus"
+                        "tab0"
                     ],
                     "document": {
                         "changed": false,
@@ -237,7 +234,7 @@
                         "welcome": {}
                     },
                     "editorType": "welcome",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -270,41 +267,14 @@
                         "tab2"
                     ],
                     "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1526711836061
+                        },
                         "filter": true,
                         "title": "composer.json",
                         "tooltip": "/composer.json",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 1307,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 9,
-                                    "column": 6
-                                },
-                                "end": {
-                                    "row": 9,
-                                    "column": 6
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": {
-                                "row": 80,
-                                "state": "start",
-                                "mode": "ace/mode/json"
-                            },
-                            "cleansed": true
-                        },
-                        "hash": "1890c6d4937e22cdacbc98a5e8af9bb46a72329e",
-                        "meta": {
-                            "timestamp": 1526710797470
-                        },
-                        "changed": false
+                        "ace": {}
                     },
                     "editorType": "ace",
                     "active": false
@@ -314,12 +284,13 @@
                     "name": "tab4",
                     "path": "/web/sites/default/settings.php",
                     "className": [
-                        "tab4"
+                        "tab4",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526709431076
+                            "timestamp": 1526711456676
                         },
                         "filter": true,
                         "title": "settings.php",
@@ -327,7 +298,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 }
             ],
             "skin": "editor_tab",

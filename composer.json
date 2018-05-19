@@ -24,6 +24,7 @@
         "drupal/admin_menu": "^3.0@RC",
         "drupal/composer_autoloader": "^1.0",
         "drupal/drupal": "~7.0",
+        "drupal/settingsphp": "1.x-dev",
         "drush/drush": "~8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0"
@@ -71,7 +72,7 @@
         "installer-paths": {
             "web/": ["type:drupal-core"],
             "web/profiles/{$name}/": ["type:drupal-profile"],
-            "web/sites/all/drush/{$name}/": ["type:drupal-drush"],
+            "web/sites/all/drush/{$name}/": ["type:drupal-drush", "drupal/settingsphp"],
             "web/sites/all/libraries/{$name}/": ["type:drupal-library"],
             "web/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
             "web/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"]
