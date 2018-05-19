@@ -37,8 +37,8 @@
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab12",
-                    "tab3"
+                    "tab3",
+                    "tab12"
                 ]
             },
             "name": "pane1",
@@ -48,8 +48,7 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12",
-                        "focus"
+                        "tab12"
                     ],
                     "document": {
                         "changed": false,
@@ -57,8 +56,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"4be1d069ffa4\"",
-                        "tooltip": "bash - \"4be1d069ffa4\"",
+                        "title": "bash - \"f249b7ce3fce\"",
+                        "tooltip": "bash - \"f249b7ce3fce\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -128,7 +127,7 @@
             "@acestatus": 1,
             "@datagrid": 1,
             "@divider": 4,
-            "@document": 8,
+            "@document": 6,
             "@form": 6,
             "@immediate": 1,
             "@menu": 5,
@@ -137,9 +136,9 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 7,
+            "@session": 5,
             "@tab": 6,
-            "@undoManager": 8,
+            "@undoManager": 6,
             "@welcome": 1
         }
     },
@@ -157,8 +156,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab12",
-            "tab1"
+            "tab0",
+            "tab12"
         ]
     },
     "panels": {
@@ -205,13 +204,13 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/README.md",
+            "focus": "tab0",
             "meta": {
                 "accessList": [
+                    "tab0",
                     "tab1",
-                    "tab5",
                     "tab2",
-                    "tab0"
+                    "tab5"
                 ]
             },
             "name": "pane0",
@@ -224,14 +223,39 @@
                         "tab2"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1526729059192
-                        },
                         "filter": true,
                         "title": "composer.json",
                         "tooltip": "/composer.json",
-                        "ace": {}
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 994,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 76,
+                                    "column": 135
+                                },
+                                "end": {
+                                    "row": 76,
+                                    "column": 135
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": {
+                                "row": 302,
+                                "mode": "ace/mode/json"
+                            }
+                        },
+                        "hash": "ab93cacc7628d568be1660feb77652c812b54f60",
+                        "meta": {
+                            "timestamp": 1526729059251
+                        },
+                        "changed": false
                     },
                     "editorType": "ace",
                     "active": false
@@ -241,7 +265,8 @@
                     "name": "tab0",
                     "path": "",
                     "className": [
-                        "tab0"
+                        "tab0",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -254,20 +279,19 @@
                         "welcome": {}
                     },
                     "editorType": "welcome",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
                     "name": "tab1",
                     "path": "/README.md",
                     "className": [
-                        "tab1",
-                        "focus"
+                        "tab1"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526722429591
+                            "timestamp": 1526729308521
                         },
                         "filter": true,
                         "title": "README.md",
@@ -275,7 +299,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -285,14 +309,40 @@
                         "tab5"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1526729105699
-                        },
                         "filter": true,
                         "title": "settings.php",
                         "tooltip": "/web/sites/default/settings.php",
-                        "ace": {}
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 3860,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 248,
+                                    "column": 9
+                                },
+                                "end": {
+                                    "row": 248,
+                                    "column": 9
+                                },
+                                "isBackwards": false
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": {
+                                "row": 8,
+                                "state": "php-doc-start",
+                                "mode": "ace/mode/php"
+                            }
+                        },
+                        "hash": "67a43ab20801be3673ec05db926f516194694e52",
+                        "meta": {
+                            "timestamp": 1526729094287
+                        },
+                        "changed": false
                     },
                     "editorType": "ace",
                     "active": false
@@ -306,6 +356,9 @@
     "tree_selection": {
         "json()": [
             "/README.md"
+        ]
+    }
+}        "/README.md"
         ]
     }
 }

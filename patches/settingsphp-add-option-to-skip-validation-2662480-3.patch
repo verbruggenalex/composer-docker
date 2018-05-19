@@ -1,0 +1,56 @@
+diff --git a/settingsphp.drush.inc b/settingsphp.drush.inc
+index d5b91fd..8192857 100644
+--- a/settingsphp.drush.inc
++++ b/settingsphp.drush.inc
+@@ -21,6 +21,9 @@ function settingsphp_drush_command() {
+         'description' => 'Database collation. Defaults to utf8_general_ci.',
+         'example-value' => 'utf8_general_ci',
+       ),
++      'skip-validation' => array(
++        'description' => 'Skip credentials validation, if DB does not exist yet.',
++      ),
+     ),
+   );
+   return $items;
+@@ -51,22 +54,26 @@ function drush_settingsphp_generate_validate() {
+     $databases = $self['databases'];
+   }
+ 
+-  // Validate databases.
+-  require_once DRUPAL_ROOT . '/includes/file.inc';
+-  require_once DRUPAL_ROOT . '/includes/install.inc';
++  $skip = drush_get_option('skip-validation', FALSE);
++  if (!$skip) {
+ 
+-  $drivers = array_keys(drupal_get_database_types());
+-  foreach ($databases as $key => $targets) {
+-    foreach ($targets as $target => $db_spec) {
+-      if (!in_array($db_spec['driver'], $drivers)) {
+-        return drush_set_error('SETTINGSPHP_UNSUPPORTED_DB_DRIVER', dt('Unsupported db driver !driver.', array('!driver' => $db_spec['driver'])));
+-      }
+-      try {
+-        Database::setActiveConnection($key);
+-        Database::getConnection($target, $key);
+-      }
+-      catch (Exception $e) {
+-        return drush_set_error('SETTINGSPHP_CONNECTION_FAILED', dt('Failed to connect to database server. Error message: !error', array('!error' => $e->getMessage())));
++    // Validate databases.
++    require_once DRUPAL_ROOT . '/includes/file.inc';
++    require_once DRUPAL_ROOT . '/includes/install.inc';
++
++    $drivers = array_keys(drupal_get_database_types());
++    foreach ($databases as $key => $targets) {
++      foreach ($targets as $target => $db_spec) {
++        if (!in_array($db_spec['driver'], $drivers)) {
++          return drush_set_error('SETTINGSPHP_UNSUPPORTED_DB_DRIVER', dt('Unsupported db driver !driver.', array('!driver' => $db_spec['driver'])));
++        }
++        try {
++          Database::setActiveConnection($key);
++          Database::getConnection($target, $key);
++        }
++        catch (Exception $e) {
++          return drush_set_error('SETTINGSPHP_CONNECTION_FAILED', dt('Failed to connect to database server. Error message: !error', array('!error' => $e->getMessage())));
++        }
+       }
+     }
+   }

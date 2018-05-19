@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: fpfis/php56-dev
+    image: feature/php56-dev
     deploy:
       restart_policy:
         condition: on-failure
@@ -11,6 +11,7 @@ services:
     working_dir: ${PWD}/web
     volumes:
       - ${PWD}:${PWD}
+      - /var/cache/composer:/cache/composer
     labels:
       - 'traefik.backend=web'
       - 'traefik.port=8080'
