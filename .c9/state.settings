@@ -37,8 +37,8 @@
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab3",
-                    "tab12"
+                    "tab12",
+                    "tab3"
                 ]
             },
             "name": "pane1",
@@ -49,7 +49,7 @@
                     "path": "",
                     "className": [
                         "tab12",
-                        "connecting"
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -57,8 +57,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"b3598f2bc57f\"",
-                        "tooltip": "bash - \"b3598f2bc57f\"",
+                        "title": "bash - \"25a418465225\"",
+                        "tooltip": "bash - \"25a418465225\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -128,7 +128,7 @@
             "@acestatus": 1,
             "@datagrid": 1,
             "@divider": 4,
-            "@document": 4,
+            "@document": 5,
             "@form": 6,
             "@immediate": 1,
             "@menu": 5,
@@ -137,9 +137,9 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 3,
-            "@tab": 1,
-            "@undoManager": 4,
+            "@session": 4,
+            "@tab": 2,
+            "@undoManager": 5,
             "@welcome": 1
         }
     },
@@ -158,7 +158,7 @@
     "panecycle": {
         "json()": [
             "tab12",
-            "tab2"
+            "tab1"
         ]
     },
     "panels": {
@@ -205,11 +205,12 @@
     },
     "tabs": {
         "json()": {
-            "focus": "tab0",
+            "focus": "/README.md",
             "meta": {
                 "accessList": [
-                    "tab0",
-                    "tab2"
+                    "tab1",
+                    "tab2",
+                    "tab0"
                 ]
             },
             "name": "pane0",
@@ -224,7 +225,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526720154649
+                            "timestamp": 1526721619590
                         },
                         "filter": true,
                         "title": "composer.json",
@@ -239,20 +240,41 @@
                     "name": "tab0",
                     "path": "",
                     "className": [
-                        "tab0",
-                        "focus"
+                        "tab0"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
                             "welcome": true,
-                            "timestamp": 1526720197789
+                            "timestamp": 1526721736004
                         },
                         "filter": true,
                         "title": "Welcome",
                         "welcome": {}
                     },
                     "editorType": "welcome",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab1",
+                    "path": "/README.md",
+                    "className": [
+                        "tab1",
+                        "focus",
+                        "changed"
+                    ],
+                    "document": {
+                        "changed": true,
+                        "meta": {
+                            "timestamp": 1526721619590
+                        },
+                        "filter": true,
+                        "title": "README.md",
+                        "tooltip": "/README.md",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
                     "active": true
                 }
             ],
@@ -263,7 +285,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/composer.json"
+            "/README.md"
         ]
     }
 }

@@ -2,7 +2,29 @@
 
 This repository holds a proof of concept as to how you can use one single
 repository as a full build, test and deploy system. It is focused on being
-light, fast and able to be setup without any additional configuraiton. 
+light, fast and able to be setup without any additional configuraiton.
+
+## Installation
+
+Create a directory with a hooks subdirectory containing the following file:
+```bash
+#!/bin/sh
+
+docker-compose run --rm web composer install --ansi
+docker stack deploy -c docker-compose.yml master
+WEB=master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1)
+# To be replaced by mysql healthcheck.
+sleep 15
+docker exec -w ${PWD}/web $WEB ../vendor/bin/drush cc drush
+docker exec -w ${PWD}/web $WEB ../vendor/bin/drush settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal -y
+```
+
+Then run:
+```bash
+git clone git@github.com:verbruggenalex/composer-docker.git project-directory --template=git-hooks-directory
+```
+
+This will result in a working project.
 
 ## Concept introduction
 
