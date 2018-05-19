@@ -59,13 +59,22 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "./vendor/bin/drush -r ${PWD}/web cc drush",
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --help",
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal --skip-validation -y"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "./vendor/bin/drush -r ${PWD}/web cc drush",
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --help",
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal --skip-validation -y"
         ],
         "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
+            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles",
+            "./vendor/bin/drush -r ${PWD}/web cc drush",
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --help",
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal --skip-validation -y"
         ]
     },
     "extra": {
@@ -80,6 +89,9 @@
         "patches": {
             "cweagans/composer-patches": [
                 "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
+            ],
+            "drupal/settingsphp": [
+                "https://www.drupal.org/files/issues/settingsphp-add-option-to-skip-validation-2662480-1-7.x.patch"
             ],
             "drupal/stage_file_proxy": [
                 "https://www.drupal.org/files/issues/hotlinking-doesnt-work-for-files-2820271-1.patch"
