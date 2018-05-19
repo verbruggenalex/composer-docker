@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6ae2c6a09d10bc7f2e1ba6cfabd7782",
+    "content-hash": "5b978035bfc57ca0bdc794a593caec14",
     "packages": [
         {
             "name": "composer/installers",
@@ -2072,6 +2072,17 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views"
             }
+        },
+        {
+            "name": "project/database",
+            "version": "1.0.0",
+            "dist": {
+                "type": "gzip",
+                "url": "https://github.com/verbruggenalex/composer-docker/releases/download/1.0.0/drupal.sql.gz",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
         }
     ],
     "aliases": [],

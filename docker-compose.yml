@@ -27,7 +27,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
     volumes:
       - db-volume:/var/lib/mysql
-      - ${PWD}/data/db/drupal.sql.gz:/docker-entrypoint-initdb.d/drupal.sql.gz
+      - ${PWD}/vendor/project/database/drupal.sql:/docker-entrypoint-initdb.d/drupal.sql
   c9:
     image: eeacms/cloud9
     deploy:

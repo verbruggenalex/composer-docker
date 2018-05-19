@@ -8,12 +8,6 @@
             "role": "Maintainer"
         }
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/7"
-        }
-    ],
     "require": {
         "php": ">=5.2.5",
         "ext-curl": "*",
@@ -35,6 +29,7 @@
         "webflo/drupal-finder": "^1.0.0"
     },
     "require-dev": {
+        "project/database": "1.0.0",
         "drupal/devel": "~1.5.0",
         "drupal/maillog": "1.0.0-alpha1",
         "drupal/stage_file_proxy": "1.7.0"
@@ -60,13 +55,16 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "docker stack deploy -c docker-compose.yml master"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "docker stack deploy -c docker-compose.yml master"
         ],
         "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
+            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles",
+            "docker stack deploy -c docker-compose.yml master"
         ]
     },
     "extra": {
@@ -98,5 +96,22 @@
             "web/sites/all/translations",
             "web/sites/default"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "project/database",
+                "version": "1.0.0",
+                "dist": {
+                    "url": "https://github.com/verbruggenalex/composer-docker/releases/download/1.0.0/drupal.sql.gz",
+                    "type": "gzip"
+                }
+            }
+        }
+    ]
 }
