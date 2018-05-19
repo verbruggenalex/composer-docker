@@ -1,0 +1,82 @@
+version: '3'
+services:
+  web:
+    image: fpfis/php56-dev
+    deploy:
+      restart_policy:
+        condition: on-failure
+    environment:
+      - DOCUMENT_ROOT=${PWD}/web
+      - XDEBUG_CONFIG=idekey=cloud9ide remote_connect_back=0 remote_host=172.20.0.1
+    working_dir: ${PWD}
+    volumes:
+      - ${PWD}:${PWD}
+    labels:
+      - 'traefik.backend=web'
+      - 'traefik.port=8080'
+      - 'traefik.frontend.rule=Host:web.local'
+  db:
+    image: mysql:5.6
+    deploy:
+      restart_policy:
+        condition: on-failure
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-drupal}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-password}
+      - MYSQL_USER=${MYSQL_USER:-drupal}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
+    volumes:
+      - db-volume:/var/lib/mysql
+      - ${PWD}/data/db/drupal.sql.gz:/docker-entrypoint-initdb.d/drupal.sql.gz
+  c9:
+    image: eeacms/cloud9
+    deploy:
+      restart_policy:
+        condition: on-failure
+    environment:
+      - C9_WORKSPACE=${PWD}
+    volumes:
+      - ${PWD}:${PWD}
+      - /usr/bin/docker:/usr/bin/docker
+      - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - 'traefik.backend=cloud9'
+      - 'traefik.port=8080'
+      - 'traefik.frontend.rule=Host:c9.local'
+  pma:
+    image: phpmyadmin/phpmyadmin
+    deploy:
+      restart_policy:
+        condition: on-failure
+    environment:
+      PMA_PORT: 81
+      PMA_HOST: mysql
+      PMA_USER: ${MYSQL_USER:-root}
+      PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD:-password}
+      PHP_UPLOAD_MAX_FILESIZE: 1G
+      PHP_MAX_INPUT_VARS: 1G
+    labels:
+      - 'traefik.backend=pma'
+      - 'traefik.port=81'
+      - 'traefik.frontend.rule=Host:pma.local'
+#  portainer:
+#    image: portainer/portainer
+#    command: --no-auth -H unix:///var/run/docker.sock
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#    labels:
+#      - 'traefik.backend=portainer'
+#      - 'traefik.port=9000'
+#      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
+  traefik:
+    image: traefik
+    command: -c /dev/null --web --docker --logLevel=INFO
+    ports:
+      - '80:80'
+      - '8080:8080' # Dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  db-volume:
