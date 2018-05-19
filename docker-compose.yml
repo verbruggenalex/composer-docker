@@ -28,6 +28,9 @@ services:
     volumes:
       - db-volume:/var/lib/mysql
       - ${PWD}/vendor/project/database/drupal.sql:/docker-entrypoint-initdb.d/drupal.sql
+    labels:
+      - 'traefik.backend=db'
+      - 'traefik.port=3306'
   c9:
     image: eeacms/cloud9
     deploy:
