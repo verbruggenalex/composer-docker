@@ -48,7 +48,8 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12"
+                        "tab12",
+                        "connecting"
                     ],
                     "document": {
                         "changed": false,
@@ -56,8 +57,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"f249b7ce3fce\"",
-                        "tooltip": "bash - \"f249b7ce3fce\"",
+                        "title": "bash - \"dfe6c7830050\"",
+                        "tooltip": "bash - \"dfe6c7830050\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -156,7 +157,7 @@
     },
     "panecycle": {
         "json()": [
-            "tab0",
+            "tab2",
             "tab12"
         ]
     },
@@ -204,12 +205,12 @@
     },
     "tabs": {
         "json()": {
-            "focus": "tab0",
+            "focus": "/composer.json",
             "meta": {
                 "accessList": [
+                    "tab2",
                     "tab0",
                     "tab1",
-                    "tab2",
                     "tab5"
                 ]
             },
@@ -220,53 +221,30 @@
                     "name": "tab2",
                     "path": "/composer.json",
                     "className": [
-                        "tab2"
+                        "tab2",
+                        "changed",
+                        "conflict",
+                        "focus"
                     ],
                     "document": {
+                        "changed": true,
+                        "meta": {
+                            "timestamp": 1526767917500
+                        },
                         "filter": true,
                         "title": "composer.json",
                         "tooltip": "/composer.json",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 994,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 76,
-                                    "column": 135
-                                },
-                                "end": {
-                                    "row": 76,
-                                    "column": 135
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": {
-                                "row": 302,
-                                "mode": "ace/mode/json"
-                            }
-                        },
-                        "hash": "ab93cacc7628d568be1660feb77652c812b54f60",
-                        "meta": {
-                            "timestamp": 1526729059251
-                        },
-                        "changed": false
+                        "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
                     "name": "tab0",
                     "path": "",
                     "className": [
-                        "tab0",
-                        "focus"
+                        "tab0"
                     ],
                     "document": {
                         "changed": false,
@@ -279,7 +257,7 @@
                         "welcome": {}
                     },
                     "editorType": "welcome",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -306,7 +284,8 @@
                     "name": "tab5",
                     "path": "/web/sites/default/settings.php",
                     "className": [
-                        "tab5"
+                        "tab5",
+                        "changed"
                     ],
                     "document": {
                         "filter": true,
@@ -340,9 +319,9 @@
                         },
                         "hash": "67a43ab20801be3673ec05db926f516194694e52",
                         "meta": {
-                            "timestamp": 1526729094287
+                            "timestamp": 1526767597605
                         },
-                        "changed": false
+                        "changed": true
                     },
                     "editorType": "ace",
                     "active": false
@@ -355,10 +334,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/README.md"
-        ]
-    }
-}        "/README.md"
+            "/composer.json"
         ]
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f89e3d1ba095879d1651e9d7a1080fbc",
+    "content-hash": "0a88706a63f152214fe194d70e61a6a5",
     "packages": [
         {
             "name": "composer/installers",
@@ -319,7 +319,10 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "cweagans\\Composer\\Patches"
+                "class": "cweagans\\Composer\\Patches",
+                "patches_applied": [
+                    "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
+                ]
             },
             "autoload": {
                 "psr-4": {
@@ -677,7 +680,7 @@
                     }
                 },
                 "patches_applied": [
-                    "https://www.drupal.org/files/issues/settingsphp-add-option-to-skip-validation-2662480-1-7.x.patch"
+                    "https://www.drupal.org/files/issues/2018-05-20/settingsphp-add-option-to-skip-validation-2662480-3.patch"
                 ]
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -1977,7 +1980,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                }
+                },
+                "patches_applied": [
+                    "https://www.drupal.org/files/issues/hotlinking-doesnt-work-for-files-2820271-1.patch"
+                ]
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
             "license": [
