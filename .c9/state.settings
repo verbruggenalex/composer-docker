@@ -48,7 +48,8 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12"
+                        "tab12",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -156,8 +157,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab5",
-            "tab12"
+            "tab12",
+            "tab1"
         ]
     },
     "panels": {
@@ -195,8 +196,7 @@
             "json()": [
                 "/",
                 "/web/sites",
-                "/web/sites/default",
-                "/web"
+                "/web/sites/default"
             ]
         }
     },
@@ -205,13 +205,13 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/web/sites/default/settings.php",
+            "focus": "/README.md",
             "meta": {
                 "accessList": [
+                    "tab1",
                     "tab5",
                     "tab2",
-                    "tab0",
-                    "tab1"
+                    "tab0"
                 ]
             },
             "name": "pane0",
@@ -261,61 +261,33 @@
                     "name": "tab1",
                     "path": "/README.md",
                     "className": [
-                        "tab1"
+                        "tab1",
+                        "focus"
                     ],
                     "document": {
-                        "filter": true,
-                        "title": "README.md",
-                        "tooltip": "/README.md",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 144,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 24,
-                                    "column": 78
-                                },
-                                "end": {
-                                    "row": 24,
-                                    "column": 78
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": {
-                                "row": 8,
-                                "state": "start",
-                                "mode": "ace/mode/markdown"
-                            }
-                        },
-                        "hash": "bb4d808fe377a7675eaa635d61332ad0832097ea",
+                        "changed": false,
                         "meta": {
                             "timestamp": 1526722429591
                         },
-                        "changed": false
+                        "filter": true,
+                        "title": "README.md",
+                        "tooltip": "/README.md",
+                        "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
                     "name": "tab5",
                     "path": "/web/sites/default/settings.php",
                     "className": [
-                        "tab5",
-                        "changed",
-                        "conflict",
-                        "focus"
+                        "tab5"
                     ],
                     "document": {
-                        "changed": true,
+                        "changed": false,
                         "meta": {
-                            "timestamp": 1526729094287
+                            "timestamp": 1526729105699
                         },
                         "filter": true,
                         "title": "settings.php",
@@ -323,7 +295,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 }
             ],
             "skin": "editor_tab",
@@ -333,7 +305,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/web/sites/default/settings.php"
+            "/README.md"
         ]
     }
 }
