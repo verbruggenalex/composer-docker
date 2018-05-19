@@ -88,7 +88,7 @@
                 "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
             ],
             "drupal/settingsphp": [
-                "patches/settingsphp-add-option-to-skip-validation-2662480-3.patch"
+                "https://www.drupal.org/files/issues/2018-05-20/settingsphp-add-option-to-skip-validation-2662480-3.patch"
             ],
             "drupal/stage_file_proxy": [
                 "https://www.drupal.org/files/issues/hotlinking-doesnt-work-for-files-2820271-1.patch"
