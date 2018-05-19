@@ -16,12 +16,14 @@ WEB=master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-t
 # To be replaced by mysql healthcheck.
 sleep 15
 docker exec -w ${PWD}/web $WEB ../vendor/bin/drush cc drush
-docker exec -w ${PWD}/web $WEB ../vendor/bin/drush settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal -y
+docker exec -w ${PWD}/web $WEB ../vendor/bin/drush settingsphp-generate \
+  --db-url=mysql://drupal:password@db:3306/drupal -y
 ```
 
 Then run:
 ```bash
-git clone git@github.com:verbruggenalex/composer-docker.git project-directory --template=git-hooks-directory
+git clone git@github.com:verbruggenalex/composer-docker.git project-directory \
+  --template=git-hooks-directory
 ```
 
 This will result in a working project.
