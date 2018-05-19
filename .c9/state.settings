@@ -48,7 +48,8 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12"
+                        "tab12",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -56,8 +57,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"7980fbc144bc\"",
-                        "tooltip": "bash - \"7980fbc144bc\"",
+                        "title": "bash - \"bd56198acbb5\"",
+                        "tooltip": "bash - \"bd56198acbb5\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -127,7 +128,7 @@
             "@acestatus": 1,
             "@datagrid": 1,
             "@divider": 4,
-            "@document": 7,
+            "@document": 6,
             "@form": 6,
             "@immediate": 1,
             "@menu": 5,
@@ -136,9 +137,9 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 5,
+            "@session": 4,
             "@tab": 5,
-            "@undoManager": 7,
+            "@undoManager": 6,
             "@welcome": 1
         }
     },
@@ -156,8 +157,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab4",
-            "tab12"
+            "tab12",
+            "tab2"
         ]
     },
     "panels": {
@@ -205,12 +206,12 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/web/sites/default/settings.php",
+            "focus": "/composer.json",
             "meta": {
                 "accessList": [
-                    "tab4",
                     "tab2",
                     "tab0",
+                    "tab4",
                     "tab1"
                 ]
             },
@@ -264,12 +265,13 @@
                     "name": "tab2",
                     "path": "/composer.json",
                     "className": [
-                        "tab2"
+                        "tab2",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526711836061
+                            "timestamp": 1526713031977
                         },
                         "filter": true,
                         "title": "composer.json",
@@ -277,20 +279,19 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
                     "name": "tab4",
                     "path": "/web/sites/default/settings.php",
                     "className": [
-                        "tab4",
-                        "focus"
+                        "tab4"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526711456676
+                            "timestamp": 1526713053785
                         },
                         "filter": true,
                         "title": "settings.php",
@@ -298,7 +299,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 }
             ],
             "skin": "editor_tab",
