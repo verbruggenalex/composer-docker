@@ -56,22 +56,13 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "docker stack deploy -c docker-compose.yml master",
-            "docker exec master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1) ../vendor/bin/drush cc drush",
-            "docker exec master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1) ../vendor/bin/drush settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal -y"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "docker stack deploy -c docker-compose.yml master",
-            "docker exec master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1) ../vendor/bin/drush cc drush",
-            "docker exec master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1) ../vendor/bin/drush settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal -y"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles",
-            "docker stack deploy -c docker-compose.yml master",
-            "docker exec master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1) ../vendor/bin/drush cc drush",
-            "docker exec master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1) ../vendor/bin/drush settingsphp-generate --db-url=mysql://drupal:password@db:3306/drupal -y"
+            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
         ]
     },
     "extra": {
