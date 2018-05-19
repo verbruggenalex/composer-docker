@@ -48,8 +48,7 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12",
-                        "focus"
+                        "tab12"
                     ],
                     "document": {
                         "changed": false,
@@ -157,8 +156,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab12",
-            "tab2"
+            "tab2",
+            "tab12"
         ]
     },
     "panels": {
@@ -196,8 +195,7 @@
             "json()": [
                 "/",
                 "/web/sites",
-                "/web/sites/default",
-                "/web"
+                "/web/sites/default"
             ]
         }
     },
@@ -209,57 +207,11 @@
             "focus": "/composer.json",
             "meta": {
                 "accessList": [
-                    "tab2",
-                    "tab0",
-                    "tab4",
-                    "tab1"
+                    "tab2"
                 ]
             },
             "name": "pane0",
             "nodes": [
-                {
-                    "type": "tab",
-                    "name": "tab0",
-                    "path": "",
-                    "className": [
-                        "tab0"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "welcome": true,
-                            "timestamp": 1524321281632
-                        },
-                        "filter": true,
-                        "title": "Welcome",
-                        "welcome": {}
-                    },
-                    "editorType": "welcome",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab1",
-                    "path": "",
-                    "className": [
-                        "tab1"
-                    ],
-                    "document": {
-                        "filter": true,
-                        "title": "Preferences",
-                        "preferences": {
-                            "activePanel": "preferences.project",
-                            "section": "Run & Debug"
-                        },
-                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
-                        "meta": {
-                            "timestamp": 1525724858957
-                        },
-                        "changed": false
-                    },
-                    "editorType": "preferences",
-                    "active": false
-                },
                 {
                     "type": "tab",
                     "name": "tab2",
@@ -271,7 +223,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526713031977
+                            "timestamp": 1526713113221
                         },
                         "filter": true,
                         "title": "composer.json",
@@ -280,26 +232,6 @@
                     },
                     "editorType": "ace",
                     "active": true
-                },
-                {
-                    "type": "tab",
-                    "name": "tab4",
-                    "path": "/web/sites/default/settings.php",
-                    "className": [
-                        "tab4"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1526713053785
-                        },
-                        "filter": true,
-                        "title": "settings.php",
-                        "tooltip": "/web/sites/default/settings.php",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
                 }
             ],
             "skin": "editor_tab",
