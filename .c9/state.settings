@@ -57,8 +57,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"7e0a34db8219\"",
-                        "tooltip": "bash - \"7e0a34db8219\"",
+                        "title": "bash - \"b3598f2bc57f\"",
+                        "tooltip": "bash - \"b3598f2bc57f\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -157,8 +157,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab2",
-            "tab12"
+            "tab12",
+            "tab2"
         ]
     },
     "panels": {
@@ -205,11 +205,11 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/composer.json",
+            "focus": "tab0",
             "meta": {
                 "accessList": [
-                    "tab2",
-                    "tab0"
+                    "tab0",
+                    "tab2"
                 ]
             },
             "name": "pane0",
@@ -219,13 +219,12 @@
                     "name": "tab2",
                     "path": "/composer.json",
                     "className": [
-                        "tab2",
-                        "focus"
+                        "tab2"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526715373459
+                            "timestamp": 1526720154649
                         },
                         "filter": true,
                         "title": "composer.json",
@@ -233,27 +232,28 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
                     "name": "tab0",
                     "path": "",
                     "className": [
-                        "tab0"
+                        "tab0",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
                             "welcome": true,
-                            "timestamp": 1526715428469
+                            "timestamp": 1526720197789
                         },
                         "filter": true,
                         "title": "Welcome",
                         "welcome": {}
                     },
                     "editorType": "welcome",
-                    "active": false
+                    "active": true
                 }
             ],
             "skin": "editor_tab",
