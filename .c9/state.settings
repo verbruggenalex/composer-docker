@@ -37,8 +37,8 @@
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab12",
-                    "tab3"
+                    "tab3",
+                    "tab12"
                 ]
             },
             "name": "pane1",
@@ -48,7 +48,8 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12"
+                        "tab12",
+                        "connecting"
                     ],
                     "document": {
                         "changed": false,
@@ -56,8 +57,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"bd56198acbb5\"",
-                        "tooltip": "bash - \"bd56198acbb5\"",
+                        "title": "bash - \"7e0a34db8219\"",
+                        "tooltip": "bash - \"7e0a34db8219\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -127,7 +128,7 @@
             "@acestatus": 1,
             "@datagrid": 1,
             "@divider": 4,
-            "@document": 6,
+            "@document": 4,
             "@form": 6,
             "@immediate": 1,
             "@menu": 5,
@@ -136,9 +137,9 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 4,
-            "@tab": 5,
-            "@undoManager": 6,
+            "@session": 3,
+            "@tab": 1,
+            "@undoManager": 4,
             "@welcome": 1
         }
     },
@@ -207,7 +208,8 @@
             "focus": "/composer.json",
             "meta": {
                 "accessList": [
-                    "tab2"
+                    "tab2",
+                    "tab0"
                 ]
             },
             "name": "pane0",
@@ -223,7 +225,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526713113221
+                            "timestamp": 1526715373459
                         },
                         "filter": true,
                         "title": "composer.json",
@@ -232,6 +234,26 @@
                     },
                     "editorType": "ace",
                     "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "",
+                    "className": [
+                        "tab0"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "welcome": true,
+                            "timestamp": 1526715428469
+                        },
+                        "filter": true,
+                        "title": "Welcome",
+                        "welcome": {}
+                    },
+                    "editorType": "welcome",
+                    "active": false
                 }
             ],
             "skin": "editor_tab",
@@ -241,7 +263,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/web/sites/default/settings.php"
+            "/composer.json"
         ]
     }
 }
