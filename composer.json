@@ -61,17 +61,20 @@
         "post-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
             "./vendor/bin/drush -r ${PWD}/web cc drush",
-            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y"
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y",
+            "./vendor/bin/drush -r ${PWD}/web sqlc < ./vendor/project/database/drupal.sql"
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
             "./vendor/bin/drush -r ${PWD}/web cc drush",
-            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y"
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y",
+            "./vendor/bin/drush -r ${PWD}/web sqlc < ./vendor/project/database/drupal.sql"
         ],
         "post-create-project-cmd": [
             "DrupalProject\\composer\\ScriptHandler::removeInternalFiles",
             "./vendor/bin/drush -r ${PWD}/web cc drush",
-            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y"
+            "./vendor/bin/drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y",
+            "./vendor/bin/drush -r ${PWD}/web sqlc < ./vendor/project/database/drupal.sql"
         ]
     },
     "extra": {

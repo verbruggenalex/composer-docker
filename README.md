@@ -10,8 +10,9 @@ Create a directory with a hooks subdirectory containing the following file:
 ```bash
 #!/bin/sh
 
-docker-compose run -w $PWD --rm web composer install --ansi --no-interaction
-docker stack deploy -c docker-compose.yml master
+docker stack deploy -c docker-compose.yml master && sleep 15
+WEB=master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1)
+docker exec -w ${PWD} $WEB composer install --ansi
 ```
 
 Then run:

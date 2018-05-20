@@ -37,8 +37,8 @@
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab3",
-                    "tab12"
+                    "tab12",
+                    "tab3"
                 ]
             },
             "name": "pane1",
@@ -56,8 +56,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"fc637b8e7548\"",
-                        "tooltip": "bash - \"fc637b8e7548\"",
+                        "title": "bash - \"ad7911cafa13\"",
+                        "tooltip": "bash - \"ad7911cafa13\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -156,7 +156,7 @@
     },
     "panecycle": {
         "json()": [
-            "tab2",
+            "tab1",
             "tab12"
         ]
     },
@@ -204,11 +204,11 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/composer.json",
+            "focus": "/README.md",
             "meta": {
                 "accessList": [
-                    "tab2",
                     "tab1",
+                    "tab2",
                     "tab0",
                     "tab5"
                 ]
@@ -240,13 +240,12 @@
                     "name": "tab2",
                     "path": "/composer.json",
                     "className": [
-                        "tab2",
-                        "focus"
+                        "tab2"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526801250476
+                            "timestamp": 1526818954908
                         },
                         "filter": true,
                         "title": "composer.json",
@@ -254,14 +253,15 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
                     "name": "tab1",
                     "path": "/README.md",
                     "className": [
-                        "tab1"
+                        "tab1",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -274,7 +274,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
@@ -282,7 +282,8 @@
                     "path": "/web/sites/default/settings.php",
                     "className": [
                         "tab5",
-                        "changed"
+                        "changed",
+                        "conflict"
                     ],
                     "document": {
                         "filter": true,
@@ -317,7 +318,7 @@
                         },
                         "hash": "67a43ab20801be3673ec05db926f516194694e52",
                         "meta": {
-                            "timestamp": 1526800579373
+                            "timestamp": 1526817686984
                         },
                         "changed": true
                     },
