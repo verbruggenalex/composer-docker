@@ -48,8 +48,7 @@
                     "name": "tab12",
                     "path": "",
                     "className": [
-                        "tab12",
-                        "connecting"
+                        "tab12"
                     ],
                     "document": {
                         "changed": false,
@@ -57,8 +56,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"dfe6c7830050\"",
-                        "tooltip": "bash - \"dfe6c7830050\"",
+                        "title": "bash - \"fc637b8e7548\"",
+                        "tooltip": "bash - \"fc637b8e7548\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -209,36 +208,13 @@
             "meta": {
                 "accessList": [
                     "tab2",
-                    "tab0",
                     "tab1",
+                    "tab0",
                     "tab5"
                 ]
             },
             "name": "pane0",
             "nodes": [
-                {
-                    "type": "tab",
-                    "name": "tab2",
-                    "path": "/composer.json",
-                    "className": [
-                        "tab2",
-                        "changed",
-                        "conflict",
-                        "focus"
-                    ],
-                    "document": {
-                        "changed": true,
-                        "meta": {
-                            "timestamp": 1526767917500
-                        },
-                        "filter": true,
-                        "title": "composer.json",
-                        "tooltip": "/composer.json",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": true
-                },
                 {
                     "type": "tab",
                     "name": "tab0",
@@ -261,6 +237,27 @@
                 },
                 {
                     "type": "tab",
+                    "name": "tab2",
+                    "path": "/composer.json",
+                    "className": [
+                        "tab2",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1526801250476
+                        },
+                        "filter": true,
+                        "title": "composer.json",
+                        "tooltip": "/composer.json",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
+                },
+                {
+                    "type": "tab",
                     "name": "tab1",
                     "path": "/README.md",
                     "className": [
@@ -269,7 +266,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526729308521
+                            "timestamp": 1526768472374
                         },
                         "filter": true,
                         "title": "README.md",
@@ -315,11 +312,12 @@
                                 "row": 8,
                                 "state": "php-doc-start",
                                 "mode": "ace/mode/php"
-                            }
+                            },
+                            "cleansed": true
                         },
                         "hash": "67a43ab20801be3673ec05db926f516194694e52",
                         "meta": {
-                            "timestamp": 1526767597605
+                            "timestamp": 1526800579373
                         },
                         "changed": true
                     },
