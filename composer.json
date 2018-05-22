@@ -30,10 +30,12 @@
         "webflo/drupal-finder": "^1.0.0"
     },
     "require-dev": {
-        "project/database": "1.0.0",
+        "behat/behat": "^3.4",
         "drupal/devel": "~1.5.0",
+        "drupal/drupal-extension": "^3.4",
         "drupal/maillog": "1.0.0-alpha1",
-        "drupal/stage_file_proxy": "1.7.0"
+        "drupal/stage_file_proxy": "1.7.0",
+        "project/database": "1.0.0"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -60,7 +62,7 @@
         ],
         "post-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "./vendor/bin/drush -y init"
+            "./vendor/bin/drush -y init",
             "drush -r ${PWD}/web cc drush",
             "drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y",
             "while ! mysqladmin ping --user=root --password=password -h mysql --silent; do echo Waiting for mysql; sleep 3; done",

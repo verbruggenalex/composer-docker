@@ -49,7 +49,7 @@
                     "path": "",
                     "className": [
                         "tab12",
-                        "focus"
+                        "connecting"
                     ],
                     "document": {
                         "changed": false,
@@ -57,12 +57,12 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"6acb4205de6a\"",
-                        "tooltip": "bash - \"6acb4205de6a\"",
+                        "title": "bash - \"c5ca6bbbb061\"",
+                        "tooltip": "bash - \"c5ca6bbbb061\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
-                            "width": 1326,
+                            "width": 1092,
                             "height": 223
                         }
                     },
@@ -157,8 +157,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab12",
-            "tab1"
+            "tab2",
+            "tab12"
         ]
     },
     "panels": {
@@ -205,11 +205,11 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/README.md",
+            "focus": "/composer.json",
             "meta": {
                 "accessList": [
-                    "tab1",
                     "tab2",
+                    "tab1",
                     "tab0"
                 ]
             },
@@ -220,7 +220,8 @@
                     "name": "tab2",
                     "path": "/composer.json",
                     "className": [
-                        "tab2"
+                        "tab2",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -233,20 +234,19 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
                     "name": "tab1",
                     "path": "/README.md",
                     "className": [
-                        "tab1",
-                        "focus"
+                        "tab1"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1526992002714
+                            "timestamp": 1527008158577
                         },
                         "filter": true,
                         "title": "README.md",
@@ -254,7 +254,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
