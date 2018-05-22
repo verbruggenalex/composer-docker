@@ -2,17 +2,19 @@
 
 This repository holds a proof of concept as to how you can use one single
 repository as a full build, test and deploy system. It is focused on being
-light, fast and able to be setup without any additional configuraiton.
+light, fast and able to be setup without any additional configuration.
 
 ## Installation
 
-Create a directory with a hooks subdirectory containing the following file:
+Create a directory with a hooks subdirectory containing a `post-checkout` file:
 ```bash
 #!/bin/sh
 
-docker stack deploy -c docker-compose.yml master && sleep 15
-WEB=master_web.1.$(docker service ps -f 'name=master_web.1' master_web -q --no-trunc | head -n1)
-docker exec -w ${PWD} $WEB composer install --ansi
+# Post checkout hook. Setup environment and run composer install.
+
+# Todo: replace sleep with mysql healthcheck.
+docker-compose up -d && sleep 30
+docker-compose exec web composer install --working-dir=../ --ansi --no-interaction --no-suggest
 ```
 
 Then run:

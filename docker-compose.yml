@@ -2,9 +2,6 @@ version: '3'
 services:
   web:
     image: feature/php56-dev
-    deploy:
-      restart_policy:
-        condition: on-failure
     environment:
       - DOCUMENT_ROOT=${PWD}/web
       - XDEBUG_CONFIG=idekey=cloud9ide remote_connect_back=0 remote_host=172.20.0.1
@@ -17,10 +14,7 @@ services:
       - 'traefik.port=8080'
       - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL:-ec.europa.eu}'
   mysql:
-    image: mysql:5.6
-    deploy:
-      restart_policy:
-        condition: on-failure
+    image: percona/percona-server:5.6
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE:-drupal}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-password}
@@ -31,9 +25,6 @@ services:
       - 'traefik.port=3306'
   cloud9:
     image: eeacms/cloud9
-    deploy:
-      restart_policy:
-        condition: on-failure
     environment:
       - C9_WORKSPACE=${PWD}
     volumes:
