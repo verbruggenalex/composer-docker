@@ -18,7 +18,7 @@
     {
       "label": "BackstopJS Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://ec.europa.eu",
+      "url": "http://localhost",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -27,7 +27,7 @@
       "removeSelectors": [],
       "hoverSelector": "",
       "clickSelector": "",
-      "postInteractionWait": "",
+      "postInteractionWait": 0,
       "selectors": [],
       "selectorExpansion": true,
       "misMatchThreshold" : 0.1,
