@@ -57,8 +57,8 @@
                             "timestamp": 1525722023140
                         },
                         "filter": true,
-                        "title": "bash - \"3a665ec50aad\"",
-                        "tooltip": "bash - \"3a665ec50aad\"",
+                        "title": "bash - \"6acb4205de6a\"",
+                        "tooltip": "bash - \"6acb4205de6a\"",
                         "terminal": {
                             "id": "devel_6",
                             "cwd": "",
@@ -128,7 +128,7 @@
             "@acestatus": 1,
             "@datagrid": 1,
             "@divider": 4,
-            "@document": 6,
+            "@document": 5,
             "@form": 6,
             "@immediate": 1,
             "@menu": 5,
@@ -137,9 +137,9 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 5,
+            "@session": 4,
             "@tab": 1,
-            "@undoManager": 6,
+            "@undoManager": 5,
             "@welcome": 1
         }
     },
@@ -209,8 +209,8 @@
             "meta": {
                 "accessList": [
                     "tab1",
-                    "tab0",
-                    "tab2"
+                    "tab2",
+                    "tab0"
                 ]
             },
             "name": "pane0",
@@ -223,36 +223,14 @@
                         "tab2"
                     ],
                     "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1527008138873
+                        },
                         "filter": true,
                         "title": "composer.json",
                         "tooltip": "/composer.json",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 1087,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 15,
-                                    "column": 27
-                                },
-                                "end": {
-                                    "row": 15,
-                                    "column": 27
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "880603bf0a4797537aa2da5d2188125f9c1e7e41",
-                        "meta": {
-                            "timestamp": 1526817504728
-                        },
-                        "changed": false
+                        "ace": {}
                     },
                     "editorType": "ace",
                     "active": false
@@ -263,13 +241,12 @@
                     "path": "/README.md",
                     "className": [
                         "tab1",
-                        "changed",
                         "focus"
                     ],
                     "document": {
-                        "changed": true,
+                        "changed": false,
                         "meta": {
-                            "timestamp": 1526819356220
+                            "timestamp": 1526992002714
                         },
                         "filter": true,
                         "title": "README.md",
@@ -307,7 +284,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/README.md"
+            "/composer.json"
         ]
     }
 }

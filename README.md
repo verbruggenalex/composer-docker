@@ -13,7 +13,7 @@ Create a directory with a hooks subdirectory containing a `post-checkout` file:
 # Post checkout hook. Setup environment and run composer install.
 
 # Todo: replace sleep with mysql healthcheck.
-docker-compose up -d && sleep 30
+docker-compose up -d
 docker-compose exec web composer install --working-dir=../ --ansi --no-interaction --no-suggest
 ```
 
