@@ -1,0 +1,9 @@
+commands:
+  drupal:site-setup:
+    - { task: "chmod", file: "${drupal.root}/sites", permissions: 0774, recursive: true }
+    - { task: "run", command: "drupal:drush-setup" }
+    - { task: "run", command: "drupal:settings-setup" }
+    - { task: "run", command: "setup:behat" }
+    - "./vendor/bin/drush --root=$(pwd)/${drupal.root} cr"
+  setup:behat:
+    - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
