@@ -8,7 +8,7 @@ $databases = array (
       'password' => '',
       'host' => 'mysql',
       'port' => '3306',
-      'database' => 'extra',
+      'database' => 'drupal',
       'charset' => 'utf8mb4',
       'collation' => 'utf8mb4_general_ci',
     ),

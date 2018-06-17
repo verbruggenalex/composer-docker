@@ -10,11 +10,11 @@ Create a directory with a hooks subdirectory containing a `post-checkout` file:
 ```bash
 #!/bin/sh
 
-# Post checkout hook. Setup environment and run composer install.
+# Post checkout hook. Setup environment, run composer install and clone site.
 
-# Todo: replace sleep with mysql healthcheck.
 docker-compose up -d
 docker-compose exec web composer install --working-dir=../ --ansi --no-interaction --no-suggest
+docker-compose exec web -w ${PWD} ./vendor/bin/run drupal:site-clone
 ```
 
 Then run:
