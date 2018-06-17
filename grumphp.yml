@@ -1,0 +1,9 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks.phpcs.ignore_patterns:
+      - web/
+      - .c9/
+    tasks.git_commit_message.matchers: ['/\./']
+imports:
+  - { resource: vendor/openeuropa/code-review/dist/drupal-conventions.yml }
