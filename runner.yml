@@ -100,12 +100,13 @@ release:
 # -----------------------------------------------------------------------------
 commands:
   drupal:site-clone:
+    - "cp -Rf $PWD/${drupal.root}/sites/${drupal.site.sites_subdir}/default.settings.php $PWD/${drupal.root}/sites/${drupal.site.sites_subdir}/settings.php
     - "ln -sf $PWD/settings.local.php $PWD/${drupal.root}/sites/${drupal.site.sites_subdir}/settings.local.php"
     - "mkdir -p ${drupal.root}/sites/${drupal.site.sites_subdir}/files/private_files"
     - "mkdir -p ${drupal.root}/profiles/${drupal.site.profile}/libraries/mpdf/graph_cache"
     - "chmod -R 777 ${drupal.root}/sites/${drupal.site.sites_subdir}/files"
     - "chmod -R 777 ${drupal.root}/profiles/${drupal.site.profile}/libraries/mpdf/graph_cache"
-    - "${runner.bin_dir}/drush -r ${drupal.root}  sql-drop -y"
+#    - "${runner.bin_dir}/drush -r ${drupal.root}  sql-drop -y"
     - "while ! mysqladmin ping --user=root -h mysql --silent; do echo Waiting for mysql; sleep 3; done"
     - "${runner.bin_dir}/drush -r ${drupal.root} sql-create --target=default -y"
     - "${runner.bin_dir}/drush -r ${drupal.root} sql-create --target=extra -y"

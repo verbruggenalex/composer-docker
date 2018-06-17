@@ -6,7 +6,7 @@ services:
       - DOCUMENT_ROOT=${PWD}/web
       - XDEBUG_CONFIG=idekey=cloud9ide remote_connect_back=0 remote_host=172.20.0.1
       - COMPOSER_PROCESS_TIMEOUT=600
-    working_dir: ${PWD}/web
+    working_dir: ${PWD}
     volumes:
       - ${PWD}:${PWD}
     labels:
@@ -16,6 +16,7 @@ services:
   mysql:
     image: mysql:5.7
     environment:
+      - MYSQL_DATABASE=drupal
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     labels:
       - 'traefik.backend=mysql'

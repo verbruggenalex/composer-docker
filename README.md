@@ -11,10 +11,10 @@ Create a directory with a hooks subdirectory containing a `post-checkout` file:
 #!/bin/sh
 
 # Post checkout hook. Setup environment, run composer install and clone site.
-
+mkdir web
 docker-compose up -d
-docker-compose exec web composer install --working-dir=../ --ansi --no-interaction --no-suggest
-docker-compose exec web -w ${PWD} ./vendor/bin/run drupal:site-clone
+docker-compose exec web composer install --ansi --no-interaction --no-suggest
+docker-compose exec web ./vendor/bin/run drupal:site-clone
 ```
 
 Then run:
