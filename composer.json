@@ -24,6 +24,7 @@
         "drupal/admin_menu": "^3.0@RC",
         "drupal/composer_autoloader": "^1.0",
         "drupal/drupal": "~7.0",
+        "drupal/gdpr": "dev-7.x-1.x",
         "drupal/settingsphp": "1.x-dev",
         "drupal/translation_helpers": "^1.0",
         "drupal/username_enumeration_prevention": "^1.2",
@@ -48,43 +49,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "component-dir": "web/sites/all/libraries",
         "sort-packages": true,
         "platform": {
             "php": "5.6"
         }
-    },
-    "scripts": {
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "./vendor/bin/drush -y init",
-            "drush -r ${PWD}/web cc drush",
-            "drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y",
-            "while ! mysqladmin ping --user=root --password=password -h mysql --silent; do echo Waiting for mysql; sleep 3; done",
-            "drush -r ${PWD}/web sqlc < ./vendor/project/database/drupal.sql"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "./vendor/bin/drush -y init",
-            "drush -r ${PWD}/web cc drush",
-            "drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y",
-            "while ! mysqladmin ping --user=root --password=password -h mysql --silent; do echo Waiting for mysql; sleep 3; done",
-            "drush -r ${PWD}/web sqlc < ./vendor/project/database/drupal.sql"
-        ],
-        "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles",
-            "./vendor/bin/drush -y init",
-            "drush -r ${PWD}/web cc drush",
-            "drush -r ${PWD}/web settingsphp-generate --db-url=mysql://drupal:password@mysql:3306/drupal --skip-validation -y",
-            "while ! mysqladmin ping --user=root --password=password -h mysql --silent; do echo Waiting for mysql; sleep 3; done",
-            "drush -r ${PWD}/web sqlc < ./vendor/project/database/drupal.sql"
-        ]
     },
     "extra": {
         "installer-paths": {
@@ -134,14 +102,10 @@
                     "type": "gzip"
                 }
             }
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "My\\Project\\": "./src/"
         },
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    }
+        {
+            "type": "vcs",
+            "url": "https://github.com/brainsum/gdpr"
+        }
+    ]
 }

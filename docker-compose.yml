@@ -5,10 +5,10 @@ services:
     environment:
       - DOCUMENT_ROOT=${PWD}/web
       - XDEBUG_CONFIG=idekey=cloud9ide remote_connect_back=0 remote_host=172.20.0.1
+      - COMPOSER_PROCESS_TIMEOUT=600
     working_dir: ${PWD}/web
     volumes:
       - ${PWD}:${PWD}
-      - /var/cache/composer:/cache/composer
     labels:
       - 'traefik.backend=web'
       - 'traefik.port=8080'
@@ -16,10 +16,7 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      - MYSQL_DATABASE=${MYSQL_DATABASE:-drupal}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-password}
-      - MYSQL_USER=${MYSQL_USER:-drupal}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     labels:
       - 'traefik.backend=mysql'
       - 'traefik.port=3306'

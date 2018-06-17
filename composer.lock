@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5742d121f1cb007c3e3c2b5500dc5df",
+    "content-hash": "367e526f5929ce8e1236207026054d3a",
     "packages": [
         {
             "name": "composer/installers",
@@ -533,7 +533,10 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "cweagans\\Composer\\Patches"
+                "class": "cweagans\\Composer\\Patches",
+                "patches_applied": [
+                    "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
+                ]
             },
             "autoload": {
                 "psr-4": {
@@ -840,7 +843,20 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                }
+                },
+                "patches_applied": [
+                    "https://raw.githubusercontent.com/ec-europa/platform-dev/2.5.35/resources/patches/ajax-js_url_suffix.patch",
+                    "https://raw.githubusercontent.com/ec-europa/platform-dev/2.5.35/resources/patches/node-node_access_views_relationship-1349080.patch",
+                    "https://www.drupal.org/files/issues/2385069-19-drupal7-do-not-test.patch",
+                    "https://raw.githubusercontent.com/ec-europa/platform-dev/2.5.35/resources/patches/default-settings-updates.patch",
+                    "https://www.drupal.org/files/issues/drupal-n1256368-91.patch",
+                    "https://www.drupal.org/files/issues/cleanup-files-1399846-315.patch",
+                    "https://www.drupal.org/files/issues/drupal_add_js_sanitize_external-2697611-4.patch",
+                    "https://www.drupal.org/files/issues/drupal-doc-theme-attributes-d7-569362-53.patch",
+                    "https://www.drupal.org/files/issues/980144-98_0.patch",
+                    "https://www.drupal.org/files/issues/drupal-revision-revert-messes-up-field-translation-1992010-31_D7.patch",
+                    "https://www.drupal.org/files/601776-contact-core-134.patch"
+                ]
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
             "license": [
@@ -926,6 +942,39 @@
             }
         },
         {
+            "name": "drupal/gdpr",
+            "version": "dev-7.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brainsum/gdpr.git",
+                "reference": "151e481aa133e08ebb3aadda7ed13d0a1ee98da1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainsum/gdpr/zipball/151e481aa133e08ebb3aadda7ed13d0a1ee98da1",
+                "reference": "151e481aa133e08ebb3aadda7ed13d0a1ee98da1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4|>=7.0.8"
+            },
+            "type": "drupal-module",
+            "autoload": {
+                "files": [
+                    "gdpr.module"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Helps with making a site GDPR-compliant.",
+            "support": {
+                "source": "https://github.com/brainsum/gdpr/tree/7.x-1.x",
+                "issues": "https://github.com/brainsum/gdpr/issues"
+            },
+            "time": "2018-06-12T11:23:47+00:00"
+        },
+        {
             "name": "drupal/settingsphp",
             "version": "dev-1.x",
             "source": {
@@ -948,7 +997,10 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
-                }
+                },
+                "patches_applied": [
+                    "https://www.drupal.org/files/issues/2018-05-20/settingsphp-add-option-to-skip-validation-2662480-3.patch"
+                ]
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
             "license": [
@@ -4282,6 +4334,53 @@
             "time": "2017-01-03T10:49:41+00:00"
         },
         {
+            "name": "drupal/checklistapi",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/checklistapi",
+                "reference": "7.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/checklistapi-7.x-1.2.zip",
+                "reference": "7.x-1.2",
+                "shasum": "d9e4369defc8406aee6549544d402ca3c7e88854"
+            },
+            "require": {
+                "drupal/drupal": "~7.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-1.2",
+                    "datestamp": "1409004828",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TravisCarden",
+                    "homepage": "https://www.drupal.org/user/236758"
+                }
+            ],
+            "description": "Provides an API for creating fillable, persistent checklists.",
+            "homepage": "https://www.drupal.org/project/checklistapi",
+            "support": {
+                "source": "http://cgit.drupalcode.org/checklistapi"
+            }
+        },
+        {
             "name": "drupal/coder",
             "version": "8.2.12",
             "source": {
@@ -4765,7 +4864,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                }
+                },
+                "patches_applied": [
+                    "https://www.drupal.org/files/issues/hotlinking-doesnt-work-for-files-2820271-1.patch"
+                ]
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
             "license": [
@@ -6300,6 +6402,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/admin_menu": 5,
+        "drupal/gdpr": 20,
         "drupal/settingsphp": 20
     },
     "prefer-stable": true,
