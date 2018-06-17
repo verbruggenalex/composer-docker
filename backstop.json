@@ -18,7 +18,7 @@
     {
       "label": "BackstopJS Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://ec.europa.eu",
+      "url": "http://web:8080",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
