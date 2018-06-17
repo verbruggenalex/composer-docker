@@ -20,10 +20,10 @@ services:
     labels:
       - 'traefik.backend=mysql'
       - 'traefik.port=3306'
-  backstopjs:
-    image: backstopjs/backstopjs
-    volumes:
-      - ${PWD}:/src
+#  backstopjs:
+#    image: backstopjs/backstopjs
+#    volumes:
+#      - ${PWD}:/src
   cloud9:
     image: eeacms/cloud9
     environment:
@@ -42,21 +42,18 @@ services:
     labels:
       - 'traefik.backend=solr'
       - 'traefik.port=8983'
-  varnish:
-    image: fpfis/varnish-d7
-    environment:
-      - BACKEND_HOST=web
-      - BACKEND_PORT=8080
-      - VCL_DIR=/test/nexteuropa_varnish/vcls
-      - VCL_FILE=default.vcl
-    labels:
-      - 'traefik.backend=varnish'
-      - 'traefik.port=6080'
+#  varnish:
+#    image: fpfis/varnish-d7
+#    environment:
+#      - BACKEND_HOST=web
+#      - BACKEND_PORT=8080
+#      - VCL_DIR=/test/nexteuropa_varnish/vcls
+#      - VCL_FILE=default.vcl
+#    labels:
+#      - 'traefik.backend=varnish'
+#      - 'traefik.port=6080'
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    deploy:
-      restart_policy:
-        condition: on-failure
     environment:
       PMA_PORT: 81
       PMA_HOST: mysql
