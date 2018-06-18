@@ -32,7 +32,7 @@ To use this project workflow there are three source code requirements:
 * [composer.json](./composer.json)
 * [runner.yml](./runner.yml)
 
-# Installation procedure
+## Installation procedure
 
 Git acts as the main controller for projects. A project can be started by cloning it
 with a template definition defined. In this example you should create a file under
