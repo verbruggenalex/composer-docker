@@ -52,7 +52,5 @@ After this is done you can run the following command to install the project.
 This will result in a clone of the project for development purposes.
 
 ```bash
-git clone git@github.com:verbruggenalex/composer-docker.git \
-  --template=~/git-hooks/clone/ \
-  -C project-directory \
+git clone git@github.com:verbruggenalex/composer-docker.git --template=~/git-hooks/clone/
 ```
