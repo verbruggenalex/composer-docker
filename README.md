@@ -47,7 +47,7 @@ should be on the environment and control what should be done with the project.
 > setting up the project. The entire workflow from development to production
 > should be encapsulated in git template files.
 
-## Project source code requirements
+## Source code requirements
 
 ### 1. docker-compose.yml
 > <details><summary>The primary file for projects is the <code>
@@ -123,7 +123,7 @@ should be on the environment and control what should be done with the project.
 > </details>
 
 ### 2. composer.json
-> <details><summary>The <code>composer.json<code> file is used as the build
+> <details><summary>The <code>composer.json</code> file is used as the build
 > system for the project. Running composer install will generate a functional
 > codebase. The command should always be executed from within the environment
 > provided by the <code>docker-compose.yml</code> file. With the following
