@@ -36,7 +36,8 @@ To use this project workflow there are three source code requirements:
 
 Git acts as the main controller for projects. A project can be started by cloning it
 with a template definition defined. In this example you should create a file under
-`~/git-hooks/clone/hooks/post-checkout:`
+`~/git-hooks/clone/hooks/post-checkout`. Do not forget to make the hook file
+executable.
 
 ```bash
 #!/bin/sh
