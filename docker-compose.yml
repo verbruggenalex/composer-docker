@@ -16,8 +16,11 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      - MYSQL_DATABASE=drupal
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-drupal}
+      - MYSQL_USER=${MYSQL_USER:-user}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-password}
+#      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     labels:
       - 'traefik.backend=mysql'
       - 'traefik.port=3306'
@@ -56,15 +59,15 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
-      PMA_PORT: 81
+      PMA_PORT: 3306
       PMA_HOST: mysql
       PMA_USER: ${MYSQL_USER:-root}
       PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD:-password}
+      PMA_ABSOLUTE_URI: 'http://phpmyadmin.${PROJECT_BASE_URL:-domain.local}'
       PHP_UPLOAD_MAX_FILESIZE: 1G
       PHP_MAX_INPUT_VARS: 1G
     labels:
       - 'traefik.backend=pma'
-      - 'traefik.port=81'
       - 'traefik.frontend.rule=Host:phpmyadmin.${PROJECT_BASE_URL:-domain.local}'
 #  portainer:
 #    image: portainer/portainer
