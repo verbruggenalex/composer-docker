@@ -40,9 +40,9 @@ with a template definition defined. In this example you should create a file und
 
 ```bash
 #!/bin/sh
->
+
 # Post checkout hook. Setup environment, run composer install and clone site.
-mkdir web
+mkdir web && \
 docker-compose up -d && \
 docker-compose exec -T web composer install --ansi --no-interaction --no-suggest && \
 docker-compose exec -T web ./vendor/bin/run drupal:site-clone
