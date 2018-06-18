@@ -21,7 +21,7 @@ The version requirements still have to be lowered if possible as the POC was
 set up with the versions defined below:
 
 * [git (>= 2.14.1)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [docker (>= 17.12.0-ce](https://docs.docker.com/install/)
+* [docker (>= 17.12.0-ce)](https://docs.docker.com/install/)
 * [docker-compose (>= 2.21.2)](https://docs.docker.com/compose/install/#install-compose)
 
 ## Source code requirements
