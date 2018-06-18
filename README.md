@@ -18,7 +18,7 @@ should be on the environment and control what should be done with the project.
 ### 1. Git
 > <details><summary>Git acts as the main controller for projects. A project can
 > be started by cloning it with a template definition defined. In this example
-> you should create a file under <code>~/git-hooks/clone/hooks/post-checkout`
+> you should create a file under <code>~/git-hooks/clone/hooks/post-checkout
 > </code>:</summary>
 >
 > ```bash
